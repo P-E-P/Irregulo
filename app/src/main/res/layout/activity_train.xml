@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".TrainActivity">
+
+    <TextView
+        android:id="@+id/infinitive_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/verb_infinitive"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <EditText
+        android:id="@+id/present_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:hint="@string/present_hint"
+        android:inputType="textShortMessage"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/infinitive_lbl"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="@+id/infinitive_lbl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+
+    <TextView
+        android:id="@+id/present_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/preterit_edit"
+        app:layout_constraintStart_toStartOf="@+id/present_edit"
+        app:layout_constraintTop_toBottomOf="@+id/present_edit" />
+
+
+    <EditText
+        android:id="@+id/preterit_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:hint="@string/preterit_hint"
+        android:inputType="textShortMessage"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/present_edit"
+        app:layout_constraintStart_toStartOf="@+id/present_edit"
+        app:layout_constraintTop_toBottomOf="@+id/present_edit" />
+
+    <TextView
+        android:id="@+id/preterit_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/past_participle_edit"
+        app:layout_constraintStart_toStartOf="@+id/preterit_edit"
+        app:layout_constraintTop_toBottomOf="@+id/preterit_edit" />
+
+    <EditText
+        android:id="@+id/past_participle_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:hint="@string/past_participle_hint"
+        android:inputType="textShortMessage"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@+id/preterit_edit"
+        app:layout_constraintStart_toStartOf="@+id/preterit_edit"
+        app:layout_constraintTop_toBottomOf="@+id/preterit_edit" />
+
+    <TextView
+        android:id="@+id/past_participle_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/past_participle_edit"
+        app:layout_constraintTop_toBottomOf="@+id/past_participle_edit" />
+
+
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/circle"
+        android:text="@string/verify_btn"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/past_participle_edit" />
+
+    <Button
+        android:id="@+id/showanswer_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/circle"
+        android:text="@string/answer"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/score_lbl"
+        app:layout_constraintEnd_toEndOf="@+id/verify_btn"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/verify_btn"
+        app:layout_constraintTop_toBottomOf="@+id/verify_btn" />
+
+    <TextView
+        android:id="@+id/score_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="20sp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/past_participle_edit"
+        app:layout_constraintStart_toStartOf="@+id/past_participle_edit"
+        app:layout_constraintVertical_bias="0.802" />
+
+
+</android.support.constraint.ConstraintLayout>
